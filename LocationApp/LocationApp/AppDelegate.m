@@ -42,4 +42,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+// pt notificarile locale
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    NSString *badgeNumber = [NSString stringWithFormat:@" Badge = %ld", notification.applicationIconBadgeNumber];
+    
+    UIAlertView *oAlertaCuNotificarea = [[UIAlertView alloc] initWithTitle:notification.alertBody message:badgeNumber delegate:nil cancelButtonTitle:@"Ok mersi" otherButtonTitles: nil];
+    [oAlertaCuNotificarea show];
+}
+
 @end

@@ -18,10 +18,26 @@
 @end
 
 @implementation ViewController
-- (IBAction)showDirectionInMaps:(id)sender {
-    
 
+- (IBAction)localNotificationPressed:(id)sender {
     
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    NSDate *dateToSend = [[NSDate date] dateByAddingTimeInterval:5];
+    
+    
+    localNotification.fireDate = dateToSend;
+    localNotification.alertBody = [NSString stringWithFormat:@"O notificare de la mine"];
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    localNotification.applicationIconBadgeNumber = 3;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    //[[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+    
+    
+}
+
+
+
+- (IBAction)showDirectionInMaps:(id)sender {
     NSString* urlAddress = [NSString stringWithFormat: @"http://maps.google.com/maps?saddr=%f,%f&daddr=%f,%f",44.4343131f, 26.03865f, 44.3f, 26.02f];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlAddress]];
 
@@ -29,8 +45,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Localizare";
     // Do any additional setup after loading the view, typically from a nib.
     [self initializareHartaCuNisteAnnotari];
+    [self registerForUserNotifications];
+    [self clearBadgeNumber];
+}
+
+- (void)clearBadgeNumber
+{
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+}
+
+
+- (void)registerForUserNotifications
+{
+    UIUserNotificationType userNotifType = UIUserNotificationTypeAlert |UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
+    UIUserNotificationSettings *notifSettings = [UIUserNotificationSettings settingsForTypes:userNotifType categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:notifSettings];
 }
 
 - (void) initializareHartaCuNisteAnnotari
