@@ -18,6 +18,14 @@
 @end
 
 @implementation ViewController
+- (IBAction)showDirectionInMaps:(id)sender {
+    
+
+    
+    NSString* urlAddress = [NSString stringWithFormat: @"http://maps.google.com/maps?saddr=%f,%f&daddr=%f,%f",44.4343131f, 26.03865f, 44.3f, 26.02f];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlAddress]];
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

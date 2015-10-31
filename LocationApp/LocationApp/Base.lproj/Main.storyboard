@@ -56,7 +56,13 @@
                             <constraint firstItem="iyI-I3-JML" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="f33-ML-I7s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7b0-LX-cGi"/>
+                    <navigationItem key="navigationItem" id="7b0-LX-cGi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="6dY-lM-ZWb">
+                            <connections>
+                                <action selector="showDirectionInMaps:" destination="BYZ-38-t0r" id="6Tb-GK-70K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="mapView" destination="fBz-OW-RwO" id="YiK-Cy-vC1"/>
