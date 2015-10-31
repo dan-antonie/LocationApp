@@ -14,6 +14,9 @@
 		A60073701BE52634006E3EAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A600736F1BE52634006E3EAE /* Images.xcassets */; };
 		A60073731BE52634006E3EAE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60073711BE52634006E3EAE /* LaunchScreen.xib */; };
 		A600737F1BE52634006E3EAE /* LocationAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A600737E1BE52634006E3EAE /* LocationAppTests.m */; };
+		A60073891BE52825006E3EAE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60073881BE52825006E3EAE /* MapKit.framework */; };
+		A600738B1BE5282C006E3EAE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A600738A1BE5282C006E3EAE /* CoreLocation.framework */; };
+		A600738E1BE52D1F006E3EAE /* AnotareDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A600738D1BE52D1F006E3EAE /* AnotareDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		A60073781BE52634006E3EAE /* LocationAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A600737D1BE52634006E3EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A600737E1BE52634006E3EAE /* LocationAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationAppTests.m; sourceTree = "<group>"; };
+		A60073881BE52825006E3EAE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A600738A1BE5282C006E3EAE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A600738C1BE52D1F006E3EAE /* AnotareDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotareDemo.h; sourceTree = "<group>"; };
+		A600738D1BE52D1F006E3EAE /* AnotareDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotareDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A600738B1BE5282C006E3EAE /* CoreLocation.framework in Frameworks */,
+				A60073891BE52825006E3EAE /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 		A60073561BE52634006E3EAE = {
 			isa = PBXGroup;
 			children = (
+				A600738A1BE5282C006E3EAE /* CoreLocation.framework */,
+				A60073881BE52825006E3EAE /* MapKit.framework */,
 				A60073611BE52634006E3EAE /* LocationApp */,
 				A600737B1BE52634006E3EAE /* LocationAppTests */,
 				A60073601BE52634006E3EAE /* Products */,
@@ -89,6 +100,8 @@
 				A600736F1BE52634006E3EAE /* Images.xcassets */,
 				A60073711BE52634006E3EAE /* LaunchScreen.xib */,
 				A60073621BE52634006E3EAE /* Supporting Files */,
+				A600738C1BE52D1F006E3EAE /* AnotareDemo.h */,
+				A600738D1BE52D1F006E3EAE /* AnotareDemo.m */,
 			);
 			path = LocationApp;
 			sourceTree = "<group>";
@@ -222,6 +235,7 @@
 				A600736B1BE52634006E3EAE /* ViewController.m in Sources */,
 				A60073681BE52634006E3EAE /* AppDelegate.m in Sources */,
 				A60073651BE52634006E3EAE /* main.m in Sources */,
+				A600738E1BE52D1F006E3EAE /* AnotareDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
